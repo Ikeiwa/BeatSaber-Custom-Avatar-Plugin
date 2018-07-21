@@ -21,6 +21,7 @@ namespace CustomAvatar
             _eventManager.OnLevelStart.Invoke();
 
             _scoreController = Resources.FindObjectsOfTypeAll<ScoreController>().FirstOrDefault();
+            if (_scoreController == null) return;
             _saberCollisionManager =
                 Resources.FindObjectsOfTypeAll<ObstacleSaberSparkleEffectManager>().FirstOrDefault();
             _gameEnergyCounter = Resources.FindObjectsOfTypeAll<GameEnergyCounter>().FirstOrDefault();
@@ -41,6 +42,7 @@ namespace CustomAvatar
 
         private void OnDestroy()
         {
+            if (_scoreController == null) return;
             _scoreController.noteWasCutEvent -= SliceCallBack;
             _scoreController.noteWasMissedEvent -= NoteMissCallBack;
             _scoreController.multiplierDidChangeEvent -= MultiplierCallBack;
