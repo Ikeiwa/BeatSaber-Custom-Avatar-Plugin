@@ -14,7 +14,7 @@ namespace CustomAvatar
     {
         public string Name
         {
-            get { return "Custom Avatars"; }
+            get { return "Custom Avatar Plugin"; }
         }
 
         public string Version
