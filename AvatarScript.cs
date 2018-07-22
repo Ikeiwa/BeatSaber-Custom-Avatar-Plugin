@@ -169,11 +169,15 @@ namespace CustomAvatar
             foreach(var cam in cameras)
             {
                 cam.cullingMask &= ~(1 << 27);
+                // layer 26 for culling the exclusions
+                cam.cullingMask &= ~(1 << 26);
             }
 
             var mainCamera = FindObjectsOfType<Camera>().FirstOrDefault(x => x.CompareTag("MainCamera"));
 
             mainCamera.cullingMask &= ~(1 << 24);
+            // layer 26 for culling the exclusions
+            mainCamera.cullingMask &= ~(1 << 26);
             mainCamera.cullingMask |= 1 << 27;
         }
 
