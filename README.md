@@ -1,3 +1,8 @@
+# UPDATE
+
+This version of the plugin is outdated, please use xyonico's version from now :
+https://github.com/xyonico/CustomAvatarsPlugin/releases
+
 # Custom Avatar Plugin
 
 Plugin for Beat Saber to import custom avatars with IK support.
